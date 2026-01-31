@@ -1,129 +1,109 @@
-# -------------------------------
-# BASIC / PRIMITIVE DATA TYPES
-# -------------------------------
+# ===============================
+# PYTHON DATA TYPES - ALL IN ONE (WE don't have to mention the type of variables like C/C++)
+# ===============================
 
-# int
-a = 10
-print("int:", a, type(a))
+# -------- 1. Numeric Types --------
+integer_num = 10            # int
+float_num = 3.14            # float
+complex_num = 2 + 3j        # complex
 
-# float
-b = 3.14
-print("float:", b, type(b))
+print("Numeric Types:")
+print(type(integer_num), integer_num)
+print(type(float_num), float_num)
+print(type(complex_num), complex_num)
+print()
 
-# complex
-c = 2 + 3j
-print("complex:", c, type(c))
+# -------- 2. Boolean --------
+is_python_easy = True
 
-# bool
-d = True
-print("bool:", d, type(d))
+print("Boolean:")
+print(type(is_python_easy), is_python_easy)
+print()
 
-# NoneType
-e = None
-print("NoneType:", e, type(e))
+# -------- 3. String --------
+string_data = "Hello, Python"
 
+print("String:")
+print(type(string_data), string_data)
+print()
 
-# -------------------------------
-# SEQUENCE DATA TYPES
-# -------------------------------
+# -------- 4. List (Mutable, Ordered) --------
+list_data = [1, 2, 3, "python", 4.5]
 
-# string
-s = "Hello Python"
-print("\nstring:", s, type(s))
+print("List:")
+print(type(list_data), list_data)
+print()
 
-# list (mutable)
-lst = [1, 2, 3, "Python", 3.14]
-lst.append(100)
-print("list:", lst, type(lst))
+# -------- 5. Tuple (Immutable, Ordered) --------
+tuple_data = (1, 2, 3, "python", 4.5)
 
-# tuple (immutable)
-tup = (10, 20, 30)
-print("tuple:", tup, type(tup))
+print("Tuple:")
+print(type(tuple_data), tuple_data)
+print()
 
-# range
-r = range(1, 5)
-print("range:", list(r), type(r))
+# -------- 6. Set (Mutable, Unordered, Unique) --------
+set_data = {1, 2, 3, 3, 4}
 
+print("Set:")
+print(type(set_data), set_data)
+print()
 
-# -------------------------------
-# SET DATA TYPES
-# -------------------------------
+# -------- 7. Frozen Set (Immutable Set) --------
+frozen_set_data = frozenset([1, 2, 3, 3, 4])
 
-# set (unique, unordered)
-st = {1, 2, 3, 3, 4}
-print("\nset:", st, type(st))
+print("Frozen Set:")
+print(type(frozen_set_data), frozen_set_data)
+print()
 
-# frozenset (immutable set)
-fst = frozenset([1, 2, 3, 3])
-print("frozenset:", fst, type(fst))
-
-
-# -------------------------------
-# MAPPING DATA TYPE
-# -------------------------------
-
-# dict (key-value pairs)
-dic = {
+# -------- 8. Dictionary (Key-Value Pairs) --------
+dict_data = {
     "name": "Arya",
     "age": 22,
-    "student": True
+    "course": "Data Science"
 }
-print("\ndict:", dic, type(dic))
 
+print("Dictionary:")
+print(type(dict_data), dict_data)
+print()
 
-# -------------------------------
-# BINARY DATA TYPES
-# -------------------------------
+# -------- 9. None Type --------
+none_data = None
 
-# bytes (immutable)
-by = b"ABC"
-print("\nbytes:", by, type(by))
+print("None Type:")
+print(type(none_data), none_data)
+print()
 
-# bytearray (mutable)
-ba = bytearray([65, 66, 67])
-ba[0] = 97
-print("bytearray:", ba, type(ba))
+# -------- 10. Bytes --------
+bytes_data = b"Python"
 
-# memoryview
-mv = memoryview(ba)
-print("memoryview:", mv, type(mv))
+print("Bytes:")
+print(type(bytes_data), bytes_data)
+print()
 
+# -------- 11. Bytearray (Mutable Bytes) --------
+bytearray_data = bytearray([65, 66, 67])
 
-# -------------------------------
-# TYPE CONVERSION (TYPE CASTING)
-# -------------------------------
+print("Bytearray:")
+print(type(bytearray_data), bytearray_data)
+print()
 
-x = 5
-y = float(x)
-z = str(x)
+# -------- 12. Range --------
+range_data = range(1, 5)
 
-print("\nType casting:")
-print("int to float:", y)
-print("int to string:", z)
+print("Range:")
+print(type(range_data), list(range_data))
+print()
 
+# -------- 13. Type Conversion (Casting) --------
+num_str = "100"
+converted_int = int(num_str)
 
-# -------------------------------
-# CHECKING DATA TYPE
-# -------------------------------
+print("Type Casting:")
+print(type(num_str), "->", type(converted_int), converted_int)
+print()
 
-print("\nType checking:")
-print(isinstance(lst, list))
-print(isinstance(dic, dict))
-print(isinstance(st, set))
-
-
-# -------------------------------
-# USER DEFINED DATA TYPE (CLASS)
-# -------------------------------
-
-class Student:
-    def __init__(self, name, roll):
-        self.name = name
-        self.roll = roll
-
-    def display(self):
-        print("\nStudent name:", self.name)
-        print("Roll no:", self.roll)
-
-s1 = Student("Arya", 1)
-s1.display()
+# -------- 14. Check Data Type --------
+x = 5.5
+print("Using isinstance():")
+print(isinstance(x, float))
+print(isinstance(x, int))
